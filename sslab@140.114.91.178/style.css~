@@ -248,7 +248,7 @@
 	#banner
 	{
 		position: relative;
-		background: #333 url(../images/lenses.jpg) no-repeat center;
+		background: #333 url(../images/lenses.png) no-repeat center;
 		background-size: cover;
 	}
 	
