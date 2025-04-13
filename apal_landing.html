@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apal — Agentic Trust Carrier</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     :root {
       --primary-color: #2F4F4F; /* Dark Slate Gray */
@@ -15,41 +16,66 @@
       background-color: var(--background-color);
       color: #333;
     }
+    .dark-mode {
+      background-color: #111827;
+      color: #F3F4F6;
+    }
   </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center px-4">
-  <div class="w-full max-w-5xl py-10">
+<body class="min-h-screen flex flex-col items-center justify-center px-4 transition-colors duration-300">
+  <button onclick="document.body.classList.toggle('dark-mode')" class="fixed top-4 right-4 bg-gray-800 text-white px-3 py-1 rounded-md text-sm">Toggle Dark Mode</button>
+  <div class="w-full max-w-5xl py-10" data-aos="fade-up">
     <!-- Hero Section -->
     <header class="text-center mb-10">
+      <img src="apal_logo_vector.svg" alt="Apal Logo" class="mx-auto mb-4 w-16 h-16">
       <h1 class="text-4xl font-bold mb-2 text-[var(--primary-color)]">Apal</h1>
       <p class="text-lg text-gray-700 mb-4">#1 Agentic Trust Carrier — Ensuring Agents Deliver at Scale</p>
       <p class="max-w-2xl mx-auto text-gray-600 text-base">Apal ensures autonomous agents act with integrity, auditability, and alignment — at scale.</p>
       <a href="#" class="mt-6 inline-block bg-[var(--accent-color)] text-white py-2 px-6 rounded-lg shadow hover:bg-blue-700 transition">Join the Waitlist</a>
     </header>
 
-    <!-- Video Section -->
-    <main class="w-full bg-white rounded-2xl shadow p-6">
+    <!-- Video Section (YouTube Embed) -->
+    <main class="w-full bg-white rounded-2xl shadow p-6" data-aos="zoom-in">
       <h2 class="text-2xl font-semibold text-[var(--primary-color)] text-center mb-4">See Apal in Action</h2>
       <p class="text-center text-gray-600 mb-4">Watch how Apal evaluates agent conversations in real time and enforces trust policies.</p>
       <div class="aspect-w-16 aspect-h-9">
-        <video controls class="w-full rounded-lg">
-          <source src="your-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/VIDEO_ID" title="Apal Demo" frameborder="0" allowfullscreen></iframe>
       </div>
       <p class="mt-4 text-center text-sm text-[var(--accent-color)]">
-        <a href="your-video.mp4" class="hover:underline" target="_blank">Click here to open the video in a new tab</a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="hover:underline" target="_blank">Click here to open the video in a new tab</a>
       </p>
     </main>
 
+    <!-- How It Works Section with Icons -->
+    <section class="mt-16" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-[var(--primary-color)] text-center mb-6">How Apal Works</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-4xl mb-2">👁️</div>
+          <h3 class="font-bold text-lg text-[var(--primary-color)] mb-2">1. Observe</h3>
+          <p class="text-gray-600">Apal monitors agent conversations and behaviors in real time.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-4xl mb-2">✔️</div>
+          <h3 class="font-bold text-lg text-[var(--primary-color)] mb-2">2. Validate</h3>
+          <p class="text-gray-600">It verifies each decision using external expert models and formal constraints.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-4xl mb-2">📜</div>
+          <h3 class="font-bold text-lg text-[var(--primary-color)] mb-2">3. Assure</h3>
+          <p class="text-gray-600">Stakeholders get a trusted, audit-ready record of what the agent did and why.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- What is Agentic Trust -->
-    <section class="mt-12 text-center">
+    <section class="mt-16 text-center" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-[var(--primary-color)] mb-2">What is Agentic Trust?</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">Apal builds a real-time verification layer for AI agents, ensuring every action is aligned with stakeholder intent. Every interaction is verifiable, auditable, and trustworthy.</p>
     </section>
 
     <!-- Trust Features -->
-    <section class="mt-12 grid md:grid-cols-2 gap-6 text-center">
+    <section class="mt-12 grid md:grid-cols-2 gap-6 text-center" data-aos="fade-up">
       <div class="bg-white p-6 rounded-xl shadow">
         <h3 class="font-bold text-lg text-[var(--primary-color)] mb-2">Zero Hallucinations</h3>
         <p class="text-gray-600">All agent output is validated in real-time using external expert models and logic checks.</p>
@@ -69,14 +95,14 @@
     </section>
 
     <!-- Social Proof / Testimonials -->
-    <section class="mt-16 text-center">
+    <section class="mt-16 text-center" data-aos="fade-up">
       <h2 class="text-xl font-semibold text-[var(--primary-color)] mb-2">Trusted by Forward-Thinking Teams</h2>
       <p class="text-gray-600 mb-4">Early adopters from leading AI labs and decentralized platforms rely on Apal to ensure trustworthy automation.</p>
       <blockquote class="italic text-gray-500 max-w-2xl mx-auto">“Apal gave us the confidence to let our AI agents negotiate on our behalf. It’s like an AI compliance layer for the future.”</blockquote>
     </section>
 
     <!-- Email Signup -->
-    <section class="mt-12 text-center">
+    <section class="mt-12 text-center" data-aos="fade-up">
       <h2 class="text-lg font-semibold text-[var(--primary-color)] mb-2">Stay in the Loop</h2>
       <p class="text-gray-600 mb-4">Sign up to get updates on beta launches, protocol updates, and funding news.</p>
       <form class="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-md mx-auto">
@@ -88,5 +114,10 @@
     <!-- Footer -->
     <footer class="mt-16 text-sm text-gray-500 text-center">&copy; 2025 Apal. All rights reserved.</footer>
   </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
