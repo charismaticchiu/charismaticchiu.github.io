@@ -6,11 +6,11 @@
   <title>Apal — Agentic Trust Carrier</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
+<style>
     :root {
-      --primary-color: #2F4F4F; /* Dark Slate Gray */
-      --accent-color: #4682B4;  /* Steel Blue */
-      --background-color: #F5F7FA; /* Very light gray-blue */
+      --primary-color: #2F4F4F;
+      --accent-color: #4682B4;
+      --background-color: #F5F7FA;
     }
     body {
       background-color: var(--background-color);
@@ -19,6 +19,21 @@
     .dark-mode {
       background-color: #111827;
       color: #F3F4F6;
+    }
+    .responsive-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* Default to 16:9 */
+    }
+    .responsive-video.portrait {
+      padding-bottom: 177.78%; /* 9:16 aspect ratio for portrait mobile */
+    }
+    .responsive-video.iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
@@ -35,16 +50,20 @@
     </header>
 
     <!-- Video Section (YouTube Embed) -->
-    <main class="w-full bg-white rounded-2xl shadow p-6" data-aos="zoom-in">
-      <h2 class="text-2xl font-semibold text-[var(--primary-color)] text-center mb-4">See Apal in Action</h2>
-      <p class="text-center text-gray-600 mb-4">Watch how Apal evaluates agent conversations in real time and enforces trust policies.</p>
-      <div class="aspect-w-16 aspect-h-9">
-        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/dFfZqGW2zVE" title="Apal Demo" frameborder="0" allowfullscreen></iframe>
+    <main class="w-full flex justify-center" data-aos="zoom-in">
+      <div class="bg-white rounded-2xl shadow p-6 w-full max-w-3xl">
+        <h2 class="text-2xl font-semibold text-[var(--primary-color)] text-center mb-4">See Apal in Action</h2>
+        <p class="text-center text-gray-600 mb-4">Watch how Apal evaluates agent conversations in real time and enforces trust policies.</p>
+        <!-- Use portrait class for vertical video -->
+        <div class="responsive-video iframe-container portrait">
+          <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/dFfZqGW2zVE" title="Apal Demo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="mt-4 text-center text-sm text-[var(--accent-color)]">
+          <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="hover:underline" target="_blank">Click here to open the video in a new tab</a>
+        </p>
       </div>
-      <p class="mt-4 text-center text-sm text-[var(--accent-color)]">
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID" class="hover:underline" target="_blank">Click here to open the video in a new tab</a>
-      </p>
     </main>
+    
 
     <!-- How It Works Section with Icons -->
     <section class="mt-16" data-aos="fade-up">
