@@ -128,8 +128,8 @@
       <h2 class="text-lg font-semibold text-[var(--primary-color)] mb-2">Stay in the Loop</h2>
       <p class="text-gray-600 mb-4">Sign up to get updates on beta launches, protocol updates, and funding news.</p>
       <form action="https://formspree.io/f/xblgbjpq" method="POST" class="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-md mx-auto">
-        <input type="email" placeholder="email@company.com" class="border border-gray-300 p-2 rounded-md w-full sm:w-64" required />
-        <input type="hidden" name="message" value="Someone is interested in your Apal!" />
+        <input type="email" name="email" placeholder="you@example.com" class="border border-gray-300 p-2 rounded-md w-full sm:w-64" required />
+        <input type="hidden" name="message" value="Someone is interested in your Apal! Their email is: {{email}}" />
         <button type="submit" class="bg-[var(--accent-color)] text-white px-4 py-2 rounded-md hover:bg-blue-700">Notify Me</button>
       </form>
     </section>
