@@ -38,6 +38,36 @@
       width: 100%;
       height: 100%;
     }
+    #conversation-section {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    #conversation-section .conversation-container {
+      width: 60%;
+      margin: 0 auto;
+      padding: 50px 20px;
+    }
+    #conversation-section .message {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    #conversation-section .claude {
+      background-color: #e8f0fe;
+      border-left: 4px solid #4285f4;
+    }
+    #conversation-section .chatgpt {
+      background-color: #eafaf1;
+      border-left: 4px solid #34a853;
+    }
+    #conversation-section .visible {
+      opacity: 1;
+      transform: none;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center px-4 transition-colors duration-300">
@@ -52,6 +82,45 @@
 <!--       <a href="#" class="mt-6 inline-block bg-[var(--accent-color)] text-white py-2 px-6 rounded-lg shadow hover:bg-blue-700 transition">Join the Waitlist</a> -->
     </header>
 
+
+  <section id="conversation-section">
+    <div class="conversation-container">
+      <div class="message claude">****Claude: Hi I want to return the Jeans that I bought last month, but the website says I cannot do it. Can you help me?</div>
+      <div class="message chatgpt">#### ChatGPT: I'd be happy to help you with your return issue! First, could you please provide me with the order number or details about the jeans (like the size, color, and brand)? This will help me look up the specific order and see what options are available.</div>
+      <div class="message claude">**** Claude: Since the return window has likely closed (most returns are within 30 days from the order date), we may need to check if there are any exceptions or solutions we can offer. I'll need your order number to proceed and review your case in detail. Could you provide that, please?</div>
+      <div class="message chatgpt">#### ChatGPT: It looks like I might have provided a response that could be confusing. Let's start again! To assist you effectively, could you please provide the order number for the jeans? This will help me check the details and see what options we might have for your situation.</div>
+      <div class="message claude">**** Claude: I see that you mentioned the order number as #432432. Let me check the details for your return eligibility. Please hold on for a moment.</div>
+      <div class="message chatgpt">#### ChatGPT: It seems I don't have access to real-time systems to pull up specific order details directly. However, I can definitely guide you through the process to check your return eligibility or find an alternative solution.
+        <br><br>
+        Here's what you can do:<br>
+        1. <strong>Log in to your Amazon account</strong>: Go to the Amazon website or app and log into your account.<br>
+        2. <strong>Go to Your Orders</strong>: Find the order with the jeans you want to return.<br>
+        3. <strong>Select Return or Replace Items</strong>: Click on the order and look for an option to return or replace the items.<br><br>
+        If the return option isn't available due to the return window being closed, you might consider contacting Amazon customer service directly through the website. They can provide specific assistance and sometimes make exceptions depending on the circumstances.
+      </div>
+      <div class="message claude">**** Claude: I see that you mentioned the order number as #432432. Let me check the details for your return eligibility. Please hold on for a moment.</div>
+      <div class="message chatgpt">#### ChatGPT: I apologize for any confusion, but as a text-based assistant, I don't actually have the capability to directly check order details such as order numbers in a live system.
+        <br><br>
+        However, I can guide you through how to check the status yourself or how to get in touch with someone who can assist further:
+        <br><br>
+        1. <strong>Log into your Amazon account:</strong> Visit the Amazon website and log in.<br>
+        2. <strong>Go to 'Your Orders':</strong> This section will list all your recent orders. Find the jeans you want to return.<br>
+        3. <strong>Select the Order:</strong> Click on the order number or details to see more options.<br>
+        4. <strong>Check Return Options:</strong> Here you will be able to see if a return is still possible and what steps you need to follow if it is.
+        <br><br>
+        If the system still shows that the return is not possible and you believe there's a special circumstance (like a product defect or an error), it would be best to contact Amazon's customer service directly.
+      </div>
+      <div class="message claude">**** Claude: I apologize for the confusion; it seems there was an error in my initial understanding of your message. You mentioned that you bought the jeans last month, but my previous messages did not address this correctly.
+        <br><br>
+        To assist you better, here's what you can do since the normal return window on Amazon is typically 30 days, and you are past this period:
+        <br><br>
+        1. <strong>Contact Amazon Customer Service</strong>: Since the typical return window has closed, reaching out to Amazon's customer service would be the best approach. They can provide specific details and exceptions if any are available for your case.<br>
+        2. <strong>Use the Help Section</strong>: Go to the Amazon website, navigate to the "Help" section, and use the "Contact Us" feature.<br>
+        3. <strong>Explain Your Situation</strong>: Clearly explain that you purchased the jeans a month ago and you dislike the style. Mention that you understand the return window has closed but are inquiring if anything can be done in this situation.
+      </div>
+    </div>
+  </section>
+    
     <!-- Video Section (YouTube Embed) -->
     <main class="w-full flex justify-center" data-aos="zoom-in">
       <div class="bg-white rounded-2xl shadow p-6 w-full max-w-md">
@@ -137,10 +206,24 @@
     <!-- Footer -->
     <footer class="mt-16 text-sm text-gray-500 text-center">&copy; 2025 Apal. All rights reserved.</footer>
   </div>
-
+  
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    const messages = document.querySelectorAll('#conversation-section .message');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    messages.forEach(msg => observer.observe(msg));
   </script>
 </body>
 </html>
