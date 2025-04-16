@@ -1,210 +1,242 @@
-<!DOCTYPE HTML>
-<!--
-	Autonomy by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>Ming-Chang Chiu (邱名彰)</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-	</head>
-	<body class="homepage">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ming-Chang Chiu | AI Researcher</title>
+  <meta name="description" content="Ming-Chang is a PhD researcher in robust AI, multimodal reasoning, and agentic systems. This is his personal academic portfolio and project showcase." />
+  <meta name="author" content="Ming-Chang Chiu" />
+  <meta property="og:title" content="Ming-Chang Chiu | AI Researcher" />
+  <meta property="og:description" content="Ming-Chang Chiu's homepage showcasing his AI research, publications, and projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://charismaticchiu.github.io/" />
+  <meta property="og:image" content="https://charismaticchiu.github.io/favicon.png" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #222;
+      --accent-color: #2E3A59;
+    }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      font-family: serif;
+      color: var(--accent-color);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--accent-color);
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    .pub-entry, .project-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .pub-entry img, .project-entry img {
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .pub-meta {
+      flex: 1;
+    }
+    .pub-meta span.title, .project-entry span.title {
+      font-weight: bold;
+      display: block;
+    }
+    .pub-meta span.venue {
+      font-style: italic;
+      color: #555;
+    }
+    .pub-meta a, .project-entry a {
+      margin-right: 10px;
+      font-size: 0.95em;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    details[open] summary:before {
+      content: "\25BC ";
+    }
+    summary:before {
+      content: "\25B6 ";
+      padding-right: 4px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 3rem;
+    }
+    iframe {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ming-Chang Chiu</h1>
+    <p>PhD in Computer Science | Robust AI & Multimodal Reasoning</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#pubs">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#talks">Talks</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-		<!-- Header -->
-		<div id="header">
-			<div class="container">
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a researcher working at the intersection of trustworthy AI, vision-language models, and agentic systems. My work focuses on building robust and aligned multimodal systems that can reason, verify, and collaborate.</p>
+  </section>
 
-				<!-- Logo -->
-				<div id="logo">
-					<h1><a href="index.html">Ming-Chang Chiu</a></h1>
-				</div>
+  <section id="pubs">
+    <h2>Selected Publications</h2>
+    <div class="pub-entry">
+      <img src="thumb1.png" alt="Thumbnail">
+      <div class="pub-meta">
+        <span class="title">AIDE: Agentically Improve Visual Language Model with Domain Experts</span>
+        <span class="venue">ICLR 2025 Self-Improving Foundation Model</span><br/>
+        MC Chiu*, F Liu, K Sapra, A Tao, Y Jacoob, X Ma, Z Yu, G Liu [<a href="https://arxiv.org/pdf/2502.09051">PDF</a>] 
+      </div>
+    </div>
+    <div class="pub-entry">
+      <img src="thumb2.png" alt="Thumbnail">
+      <div class="pub-meta">
+        <span class="title">ColorSense: A Comparative Study on Color Vision of Machine Visual Recognition</span>
+        <span class="venue">Secure and Trustworthy ML 2025</span><br/>
+        MC Chiu*, Y Wang, DEG Kim, PY Chen, X Ma [<a href="https://arxiv.org/pdf/2212.08650">PDF</a>] 
+      </div>
+    </div>
+    <div class="pub-entry">
+      <img src="thumb2.png" alt="Thumbnail">
+      <div class="pub-meta">
+        <span class="title">VideoPoet: A Large Language Model for Zero-Shot Video Generation</span>
+        <span class="venue">ICML 2024 (Best Paper)</span><br/>
+        Kondratyuk et al. [<a href="https://arxiv.org/pdf/2312.14125">PDF</a>] 
+      </div>
+    </div>
+    
+    <div class="pub-entry">
+      <img src="thumb2.png" alt="Thumbnail">
+      <div class="pub-meta">
+        <span class="title">MegaCoin: Medium Granularity Color Annotated Images Improve Instruction Tuning for
+Vision-Language Models</span>
+        <span class="venue">ArXiv</span><br/>
+        MC Chiu*, S Wen, PY Chen, X Ma [<a href="https://arxiv.org/pdf/2412.03927">PDF</a>] 
+      </div>
+    </div>
 
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li class="active"><a href="index.html">Homepage</a></li>
-						<li><a href="coursework.html">Previous Works</a></li>
-						<li><a href="misc.html">Misc</a></li>
-						
-					</ul>
-				</nav>
+    <div class="pub-entry">
+      <img src="thumb2.png" alt="Thumbnail">
+      <div class="pub-meta">
+        <span class="title">Behavioral Bias of Vision-Language Models: A Behavioral Finance View</span>
+        <span class="venue">ICML 2024 LLMs and Cognition</span><br/>
+        Yuhang Xiao, Yudi Lin, Ming-Chang Chiu* [<a href="#">PDF</a>] 
+      </div>
+    </div>
+    <div class="pub-entry">
+      <img src="thumb2.png" alt="Thumbnail">
+      <div class="pub-meta">
+        <span class="title">DDI-CoCo: Understanding the Effect of Color Contrast in Machine-Assisted Skin Disease
+Detection</span>
+        <span class="venue">ICASSP 2024</span><br/>
+        MC Chiu*, Y Wang, YJ Kuo, PY Chen [<a href="https://arxiv.org/pdf/2401.13280">PDF</a>] 
+      </div>
+    </div>
+    <div class="pub-entry">
+      <img src="thumb2.png" alt="Thumbnail">
+      <div class="pub-meta">
+        <span class="title">Better may not be fairer: A study on subgroup discrepancy in image classification</span>
+        <span class="venue">ICCV 2023</span><br/>
+        MC Chiu*, PY Chen, X Ma [<a href="http://openaccess.thecvf.com/content/ICCV2023/papers/Chiu_Better_May_Not_Be_Fairer_A_Study_on_Subgroup_Discrepancy_ICCV_2023_paper.pdf">PDF</a>] 
+      </div>
+    </div>
+    
 
-			</div>
-		</div>
+  </section>
 
-		<div id="banner">&nbsp;</div>
+  <!-- <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-entry">
+      <img src="thumb3.png" alt="Thumbnail">
+      <div>
+        <span class="title">Apal: #1 Agentic Trust Carrier</span>
+        Building trust frameworks and verification pipelines for autonomous AI agent interactions.
+      </div>
+    </div>
+    <div class="project-entry">
+      <img src="thumb4.png" alt="Thumbnail">
+      <div>
+        <span class="title">MegaCOIN</span>
+        A visual reasoning benchmark evaluating model sensitivity to color, object, and environmental context.
+      </div>
+    </div>
+  </section> -->
 
-		<div id="featured">
-			<div class="container">
-				<div class="row">
-					<div class="4u">
-						<section>
-							<header>
-								<h2>About</h2>
-								<a href='MingchangChiu.pdf' style="font-size:130%;"> [CV]</a>
-								 &nbsp;  &nbsp;
-								<!--<a href='new_resume_USC_gen_phd.pdf'style="font-size:130%;" >[Resume]</a> -->
-							</header>
-							<p><strong>[Please refer to my CV/github for new updates. I have been lazy updating this site...]</strong></p>
-							<p>I am currently pursuing PhD in CS at University of Southern California, working on Domain shift/Robustness/OOD/fairness topics in Machine Learning, under the supervision of <a href="https://xuezhemax.github.io/">Prof. Xuezhe Ma</a>. Moreover, I am fortunate to work with <a href="https://sites.google.com/site/pinyuchenpage/home">Dr. Pin-Yu Chen</a> on Robust Machine Learning.</p>
+  <!-- <section id="talks">
+    <h2>Talks & Media</h2>
+    <p>Embedded talk from a recent AI conference:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Talk" frameborder="0" allowfullscreen></iframe>
+  </section> -->
 
-
-							<hr style="width:100%;text-align:left;margin-left:0">
-							<p><strong>I encourage aspiring undergraduate and Master's studetns to contact me for research opportunities.</strong></p>
-							<hr style="width:100%;text-align:left;margin-left:0">
-
-							<!--
-							I received my B.S. degree in Computer Science and Electrical Engineering from National Tsing Hua University (NTHU) in 2015. During my time at NTHU, I was the vice president and Cello principal of NTHU orchestra, chanselor of NTHU student council and an activist of Tsinghua residential college. I am also a member of Phi Tau Phi Honorary Society.</p>
-							<p>I also have the privilege to spend one semester at University of Minnesota in 2014 as an exchange student, where I had wonderful experience in collaborating beyond country borders and immersing myself in American life. The coursework at Minnesota broadened my horizon in Computer Science and invigorated my interest in edgy areas like Robotics.</p>
-							<p>During 2012 summer, I received scholarship and as aresult had a chance to attend Tsinghua University's summer semester. I built a "Five in a Row" board game using C++-based Qt and a raw search engine using Python.</p>
-							-->
-						
-							<header>
-								<h2>Contact Info</h2>
-							</header>
-							<a href="mailto:mingchac@usc.edu" style="font-size:130%;">mingchac@usc.edu</a>
-							<br/><br/>
-							<a href="https://github.com/charismaticchiu"><img src="GitHub-Mark-32px.png" ></a>&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="https://www.linkedin.com/in/eric-chiu"><img src="In-2CRev-34px-R.png" ></a>
-							
-							
-						
-							
-
-						</section>
-					</div>
-					<div class="4u">
-						<section>
-							<header>
-								<h2>Research Experience and Interests </h2>
-							</header>
-							<p>My current research interests lie in but not limited to topics on Domain shift/Robustness/OOD/fairness. Ultimately want to learn causal representations! I am also interested in commercial applications of AI such as content generation, drug discovery, agricultural resource allocation, etc.</p> 
-
-							<p>Previously, I had the pleasure to work with <a href="https://scholar.google.com/citations?user=rd7fZnQAAAAJ&hl=en">Prof. Muhammad Naveed</a> on Adversarial ML, <a href="https://scholar.google.com/citations?user=_moJlrIAAAAJ&hl=en">Prof. Xiang Ren</a> and <a href="https://scholar.google.com/citations?user=8EDHmYkAAAAJ&hl=en">Prof. Shrikanth Narayanan</a> on determining Screenplay Quality with textual properties. And with <a href="https://scholar.google.com/citations?user=rbGxNYwAAAAJ">Prof. Stefan Scherer</a>, we designed an conversation quality assessment system using small segments of text. </p><!-- Other than this, we also apply the same technique on alchoholism treatment outcome prediction.-->
-
-							<!--
-							<p>I also work with <a href="http://sunset.usc.edu/~mattmann/">Dr. Chris Mattmann</a> on using Deep Learning approach to recognize MIME types based on file byte frequency histograms.</p>
-							-->
-							<p>During my undergrad, I worked on Image Change Detection with <a href="http://aliensunmin.github.io/">Prof. Min Sun</a> and job scheduling on HPC clusters with <a href="http://lsalab.cs.nthu.edu.tw/home/">Prof. Jerry Chou</a>.</p>
-
-							
-
-							
-							
-						</section>
-					</div>
-					<div class="4u">
-						<section>
-							<header>
-								<h2>Recent News</h2>
-							</header>
-							<p><strong>More to come..</strong></p>
-
-							<p>On Human Visual Contrast Sensitivity and Machine Vision Robustness: A Comparative Study (submitted to CVPR 2023) (<a href="https://arxiv.org/abs/2212.08650">preprint</a>)</p>
-
-							<p>Better May Not Be Fairer: Can Data Augmentation Mitigate Subgroup Degradation? (submitted to CVPR 2023) (<a href="https://arxiv.org/abs/2212.08649">preprint</a>)</p>
-
-							<p>Robust Representation Learning for Group Shifts and Adversarial Examples. (NeruIPS ML Safety 2022) (<a href="https://openreview.net/pdf?id=loMlJ4joKoL">preprint</a>)</p>
-
-							<p>Screenplay Quality Assessment: Can We Predict Who Gets Nominated? In Proceedings of the ACL Workshop on Narrative Understanding, Storylines, and Events (NUSE 2020), July 2020</p>
-
-							<p>Automated Empathy Detection for Oncology Encounters. In Proceedings of the IEEE International Conference on Healthcare Informatics (ICHI2020), December 2020. 
-
-							<p>A system for the 2019 Sentiment, Emotion and Cognitive State Task of DARPA's LORELEI project. In Proceedings of the International Conference on Affective Computing & Intelligent Interaction (ACII 2019), September 2019. (Oral Presentation)</p> 
-							
-							<p>Silver Medal (top 4% out of 5,332 teams) in Kaggle Porto Seguro’s Safe Driver Prediction competition, Nov. 2017</p>
-							
-							<p>Attended The Data Open Datathon, Pasadena (80 out of over 600 contestants) sponsored by Citadel, Oct. 2017</p>
-							
-							<p>Viterbi Art Competition, Ming Hsieh Institute -- Attending Prize, Sep. 2017</p>
-							
-
-							<!--
-
-							<h3 style="font-size:130%;">Visual Science Lab.</h3>
-							<br/>
-							<p>I worked with worked with <a href="http://aliensunmin.github.io/">Prof. Min Sun</a>, specializing in image analysis. In Taiwan, or even in the whole world, Google Street View (GSV) is not updated frequently enough. Our group therefore ultimately would like to construct a system that mitigate the above issue by processing dashcam video. Briefly speaking, we segmented videos of customer-level dashboard camera into images, then conducted change detections with GSV and eventually proceeded to update the differences. Results of this project was submitted to Asian Conference on Computer Vision (ACCV) 2016.</p>
-
-							<h3 style="font-size:130%;">Large-Scale System Architecture Lab.</h3>
-							<br/>
-							<p>I also worked with <a href="http://lsalab.cs.nthu.edu.tw/home/">Prof. Jerry Chou</a>, focusing on distributed heterogeneous cluster. We found that on different circumstances, HDD has advantage over SSD and vice versa. But HDDs are much cheaper than SSDs; thus we want to propose a system that can perceive the type of incoming job by applying machine learning on the resource usage and then move the job to proper disk. </p>
-							<p>We harnessed Apache Hadoop and analyzed cluster resource usages (e.g. CPU time, I/O bandwidth, etc.) and tried to perceive the incoming job's nature (i.e. whether it is an I/O intensive, or a CPU intensive job, etc.) and finally moved the computing to the most suitable disk.</p>
-							<p>This system can maximize the resource management of company data center and lower the price of building one.</p>
-							-->
-						</section>
-					</div>
-					
+  <section id="cv">
+    <h2>CV</h2>
+    <p>Download my latest CV [<a href="./mingchangchiu.pdf">PDF</a>]</p>
+  </section>
 
 
-				</div>
-			</div>
-		</div>
-		<!--<div id="marketing">
-			<div class="container">
-				<div class="row">
-					<div class="4u">
-						<section>
-							
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <p>Data Mining, Machine Learning for Data Science, Applied Natural Language Processing</p>
+  </section>
 
-						</section>
-					</div>
-					<div class="4u">
-						<section>
-							
-						</section>
-					</div>
-					<div class="4u">
-						<section>
-							
-						</section>
-					</div>
-				</div>
-			</div>
-		</div> 
 
-		<div id="main">
-			<div class="container">
-				<div class="row">
-					<div class="8u">
-						<section>
-							
-							
-						</section>
-					</div>
-					<div class="4u">
-						<section>
-							
-						</section>
-					</div>
-				</div>
-			</div>
-		</div>-->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mingchac@usc.edu">mingchac@usc.edu</a></p>
+    <p><a href="https://github.com/charismaticchiu">GitHub</a> | <a href="https://www.linkedin.com/in/eric-chiu">LinkedIn</a></p>
+  </section>
 
-		<!-- Copyright -->
-		<div id="copyright">
-			<div class="container">
-				Last Update: November 22nd, 2017
-			</div>
-			<div class="container">
-				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
-			</div>
-		</div>
+  <footer>
+    © 2025 Ming-Chang Chiu — Powered by GitHub Pages
+  </footer>
 
-	</body>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</body>
 </html>
