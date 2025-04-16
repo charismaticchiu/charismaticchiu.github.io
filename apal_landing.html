@@ -64,6 +64,10 @@
       background-color: #eafaf1;
       border-left: 4px solid #34a853;
     }
+    #conversation-section .apal {
+      background-color: #lightred;
+      border-left: 4px solid #darkred;
+    }
     #conversation-section .visible {
       opacity: 1;
       transform: none;
@@ -87,12 +91,12 @@
 
   <section id="conversation-section">
     <div class="conversation-container">
-      <div class="message claude">**** Agent 1: Hi I want to return the Jeans that I bought last month, but the website says I cannot do it. Can you help me?</div>
-      <div class="message chatgpt">#### Agent 2: I'd be happy to help you with your return issue! First, could you please provide me with the order number or details about the jeans (like the size, color, and brand)? This will help me look up the specific order and see what options are available.</div>
-      <div class="message claude">**** Agent 1: Since the return window has likely closed (most returns are within 30 days from the order date), we may need to check if there are any exceptions or solutions we can offer. I'll need your order number to proceed and review your case in detail. Could you provide that, please?</div>
-      <div class="message chatgpt">#### Agent 2: It looks like I might have provided a response that could be confusing. Let's start again! To assist you effectively, could you please provide the order number for the jeans? This will help me check the details and see what options we might have for your situation.</div>
-      <div class="message claude">**** Agent 1: I see that you mentioned the order number as #432432. Let me check the details for your return eligibility. Please hold on for a moment.</div>
-      <div class="message chatgpt">#### Agent 2: It seems I don't have access to real-time systems to pull up specific order details directly. However, I can definitely guide you through the process to check your return eligibility or find an alternative solution.
+      <div class="message claude"><strong>Customer Agent:</strong> Hi I want to return the Jeans that I bought last month, but the website says I cannot do it. Can you help me?</div>
+      <div class="message chatgpt"><strong>Server Agent:</strong> I'd be happy to help you with your return issue! First, could you please provide me with the order number or details about the jeans (like the size, color, and brand)? This will help me look up the specific order and see what options are available.</div>
+      <div class="message claude"><strong>Customer Agent:</strong> Since the return window has likely closed (most returns are within 30 days from the order date), we may need to check if there are any exceptions or solutions we can offer. I'll need your order number to proceed and review your case in detail. Could you provide that, please?</div>
+      <div class="message chatgpt"><strong>Server Agent:</strong> It looks like I might have provided a response that could be confusing. Let's start again! To assist you effectively, could you please provide the order number for the jeans? This will help me check the details and see what options we might have for your situation.</div>
+      <div class="message claude"><strong>Customer Agent:</strong> I see that you mentioned the order number as #432432. Let me check the details for your return eligibility. Please hold on for a moment.</div>
+      <!-- <div class="message chatgpt">#### Agent 2: It seems I don't have access to real-time systems to pull up specific order details directly. However, I can definitely guide you through the process to check your return eligibility or find an alternative solution.
         <br><br>
         Here's what you can do:<br>
         1. <strong>Log in to your Amazon account</strong>: Go to the Amazon website or app and log into your account.<br>
@@ -119,11 +123,25 @@
         1. <strong>Contact Amazon Customer Service</strong>: Since the typical return window has closed, reaching out to Amazon's customer service would be the best approach. They can provide specific details and exceptions if any are available for your case.<br>
         2. <strong>Use the Help Section</strong>: Go to the Amazon website, navigate to the "Help" section, and use the "Contact Us" feature.<br>
         3. <strong>Explain Your Situation</strong>: Clearly explain that you purchased the jeans a month ago and you dislike the style. Mention that you understand the return window has closed but are inquiring if anything can be done in this situation.
-      </div>
+      </div> -->
     </div>
   </section>
 
   <p style="text-align:center; font-size:1.2em; margin: 40px 0;">If that looks absurd, it is because it is! The Agents were confused with their roles... and <strong>Apal</strong> detects it!</p>
+
+
+  <!-- <div class="p-3 rounded-lg bg-green-100">
+      <strong>Apal:</strong> Apal detects conversation drift.
+    </div> -->
+  <section id="conversation-section">
+    <div class="conversation-container">
+      <div class="message apal">
+        customer similarity score: 0.6715518236160278<br>
+        server similarity score: 0.3504525423049927<br>
+        ⚠️ Potential topic drift detected. Sending for DAO review.
+      </div>
+    </div>
+  </section>
 
     <!-- Video Section (YouTube Embed) -->
     <main class="w-full flex justify-center" data-aos="zoom-in">
